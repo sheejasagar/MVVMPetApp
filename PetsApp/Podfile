@@ -1,0 +1,16 @@
+platform :ios, '13.0'
+use_frameworks!
+inhibit_all_warnings!
+
+def shared_pods
+    pod 'SDWebImage'
+end
+
+target 'PetsApp' do
+  shared_pods
+
+  target 'PetsAppTests' do
+    inherit! :search_paths
+  end
+
+end
